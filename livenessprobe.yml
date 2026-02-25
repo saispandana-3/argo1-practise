@@ -15,7 +15,28 @@ spec:
       containers:
         - name: busyboxcontainer
           image: busybox:latest
-          command: ["sh", "-c", "touch /tmp/live; sleep 3600"]
+          command: 
+             - sh
+             - c
+             - |
+               sleep 20
+               touch /tmp/started
+               touch /tmp/ready
+               touch /tmp/live
+               sleep 3600
+          startupProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/started
+            failureThreshold: 10
+            periodSeconds: 5
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/ready
+            periodSeconds: 5
           livenessProbe:
             exec:
               command:
@@ -24,7 +45,7 @@ spec:
             initialDelaySeconds: 5
             periodSeconds: 5
             failureThreshold: 3
-
+          
 
 
 
