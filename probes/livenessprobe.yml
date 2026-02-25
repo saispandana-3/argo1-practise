@@ -42,9 +42,8 @@ spec:
               command:
                 - cat
                 - /tmp/live
-            initialDelaySeconds: 5
             periodSeconds: 5
-            failureThreshold: 3
+            
           
 
 
