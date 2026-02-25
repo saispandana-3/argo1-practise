@@ -17,7 +17,7 @@ spec:
           image: busybox:latest
           command: 
              - sh
-             - c
+             - -c
              - |
                sleep 20
                touch /tmp/started
