@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: busyboxcontainer
-          image: busybox: latest
+          image: busybox:latest
           command: ["sh", "-c", "touch /tmp/live; sleep 3600"]
           livenessProbe:
             exec:
