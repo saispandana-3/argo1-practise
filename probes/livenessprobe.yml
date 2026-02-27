@@ -24,6 +24,11 @@ spec:
                touch /tmp/ready
                touch /tmp/live
                sleep 3600
+          resources:
+              requests:
+                 cpu: 100m
+              limits:
+                 cpu: 200m
           startupProbe:
             exec:
               command:
