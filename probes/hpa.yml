@@ -9,13 +9,7 @@ spec:
      name: livenessprobe
   minReplicas: 2
   maxReplicas: 3
-  metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        target:
-          type: utilization
-          averageUtilization: 60
+  targetCPUUtilizationPercentage: 60
 
 
 
