@@ -68,5 +68,5 @@ spec:
       
          - name: volume-secret
            secret:
-             name: mysecret 
+             secretName: mysecret 
 
