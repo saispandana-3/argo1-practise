@@ -34,7 +34,6 @@ spec:
             - name: volume-cm
               mountPath: "/etc/sai"
               readOnly: true
-          volumeMounts:
             - name: volume-secret
               mountPath: "/etc/baba"
               readOnly: true
@@ -66,8 +65,8 @@ spec:
          - name: volume-cm
            configMap:
                name: probes-cm      
-      volumes:
-        - name: volume-secret
-          secret:
-            name: mysecret 
+      
+         - name: volume-secret
+           secret:
+             name: mysecret 
 
