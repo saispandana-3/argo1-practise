@@ -4,4 +4,4 @@ metadata:
   name: probes-cm
 spec:
   data:
-    db_port:3309
+    db_port: "3309"
