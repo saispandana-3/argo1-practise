@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: configMap
+metadata:
+  name: probes-cm
+spec:
+  data:
+    db_port:3309

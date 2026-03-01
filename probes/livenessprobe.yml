@@ -24,6 +24,12 @@ spec:
                touch /tmp/ready
                touch /tmp/live
                sleep 3600
+          env:
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                    name: probes-cm
+                    key: db_port
           resources:
               requests:
                  cpu: 100m
