@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: probes-cm
 data:
-   db_port: "3308"
+   db_port: "3307"
