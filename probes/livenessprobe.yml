@@ -34,10 +34,6 @@ spec:
             - name: volume-cm
               mountPath: "/etc/sai"
               readOnly: true
-      volumes:
-        - name: volume-cm
-          configMap:
-            name: probes-cm
           resources:
               requests:
                  cpu: 100m
@@ -62,8 +58,11 @@ spec:
                 - cat
                 - /tmp/live
             periodSeconds: 5
-            
-          
+      volumes:
+         - name: volume-cm
+           configMap:
+               name: probes-cm      
+      
 
 
 
