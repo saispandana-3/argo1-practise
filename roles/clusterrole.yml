@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: cluster-role-shiridi
 rules:
-  apiGroup: [""]
-  resources: ["pods"]
-  verbs: ["watch","list","get"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["watch","list","get"]
