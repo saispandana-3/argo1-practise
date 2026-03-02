@@ -4,7 +4,7 @@ metadata:
   name: rolebonding-pods
   namespace: default
 subjects:
-  - kind: user
+  - kind: User
     name: baba
     apiGroup: rbac.authorization.k8s.io
 roleRef:
