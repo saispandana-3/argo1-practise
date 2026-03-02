@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-role-binding-shiridi
+subjects:
+  - kind: User
+    name: shiridi
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-role-shiridi
+  apiGroup: rbac.authorization.k8s.io`:wq
+
+
