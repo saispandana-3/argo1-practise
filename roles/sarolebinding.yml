@@ -5,7 +5,7 @@ metadata:
   namespace: default
 subjects:
   - kind: ServiceAccount
-    name: pod-reader-sa
+    name: pod-read-sa
     namespace: default
 roleRef:
   kind: Role
