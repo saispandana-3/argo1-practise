@@ -3,7 +3,7 @@ kind: Role
 metadata:
   name: sa-role
   namespace: default
-rule:
+rules:
   - apiGroups: [""]
     resources: ["pods"]
     verbs: ["get","list"]
